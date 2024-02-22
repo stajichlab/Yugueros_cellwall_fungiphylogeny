@@ -1,0 +1,610 @@
+IQ-TREE multicore version 2.2.2.6 COVID-edition for Linux 64-bit built May 27 2023
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    i28 (AVX2, FMA3, 503 GB RAM)
+Command: iqtree2 -s FungalCW_tree_20231129/133954at4751.aa.mfa -gz -B 1000 -alrt 1000 -nt 2
+Seed:    940178 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Nov 29 01:29:04 2023
+Kernel:  AVX+FMA - 2 threads (2 CPU cores detected)
+
+Reading alignment file FungalCW_tree_20231129/133954at4751.aa.mfa ... Fasta format detected
+Reading fasta file: done in 0.000232935 secs using 49.8% CPU
+Alignment most likely contains protein sequences
+Constructing alignment: done in 0.00110888 secs using 174% CPU
+Alignment has 16 sequences with 549 columns, 542 distinct patterns
+382 parsimony-informative, 126 singleton sites, 41 constant sites
+                                                               Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.90871e-05 secs using 99.7% CPU
+   1  Basidiobolus_meristosporus_CBS_931.73.Basme2finSC.v1            38.62%    passed     89.59%
+   2  Botrytis_cinerea_T4                                             17.30%    passed     44.92%
+   3  Colletotrichum_graminicola_M1.001                               16.39%    passed     93.73%
+   4  Colletotrichum_higginsianum_IMI_349063                          17.12%    passed     70.16%
+   5  Fusarium_graminearum_PH-1                                       17.12%    passed     99.78%
+   6  Fusarium_verticillioides_7600                                   17.12%    passed     97.44%
+   7  Gilbertella_persicaria_var_persicaria_CBS_190.32-T.Gilper1.v1   27.87%    passed     71.08%
+   8  Mortierella_elongata_AG-77                                      37.52%    passed     95.51%
+   9  Mucor_mucedo_NRRL_3635                                          26.96%    passed     91.24%
+  10  Phycomyces_blakesleeanus_NRRL_1555.Phybl2.v2                    42.44%    passed     87.46%
+  11  Rhizopus_stolonifer_NRRL_66455                                  25.68%    passed      6.27%
+  12  Trichoderma_harzianum_CBS_226.95                                21.13%    passed     94.22%
+  13  Umbelopsis_ramanniana_NRRL_5844.Umbra1.v1                       26.96%    passed     91.47%
+  14  Ustilago_maydis                                                 18.21%    failed      2.54%
+  15  Zoophthora_radicans_ATCC_208865                                 27.14%    passed      9.01%
+  16  Zymoseptoria_tritici_IP0323                                     16.21%    passed     46.12%
+****  TOTAL                                                           24.61%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+Checking for duplicate sequences: done in 8.4877e-05 secs using 192% CPU
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.002 seconds
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 0.09359 secs using 198.9% CPU
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -12132.009
+Optimal log-likelihood: -12131.620
+Proportion of invariable sites: 0.010
+Gamma shape alpha: 0.732
+Parameters optimization took 1 rounds (0.091 sec)
+Time for fast ML tree search: 0.468 seconds
+
+NOTE: ModelFinder requires 16 MB RAM!
+ModelFinder will test up to 1232 protein models (sample size: 549) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            12804.519    29  25667.038    25670.391    25791.973
+  2  LG+I          12722.657    30  25505.314    25508.904    25634.557
+  3  LG+G4         12130.926    30  24321.852    24325.443    24451.095
+  4  LG+I+G4       12131.292    31  24324.583    24328.421    24458.134
+  5  LG+R2         12143.170    31  24348.340    24352.177    24481.891
+  6  LG+R3         12118.275    33  24302.549    24306.906    24444.716
+  7  LG+R4         12110.085    35  24290.170    24295.082    24440.953
+  8  LG+R5         12106.972    37  24287.945    24293.448    24447.344
+ 14  LG+I+R2       12135.056    32  24334.112    24338.205    24471.971
+ 15  LG+I+R3       12115.650    34  24299.300    24303.931    24445.776
+ 16  LG+I+R4       12108.066    36  24288.132    24293.335    24443.223
+ 17  LG+I+R5       12107.248    38  24290.496    24296.308    24454.204
+ 28  LG+F+R3       12116.689    52  24337.378    24348.491    24561.399
+ 29  LG+F+R4       12109.837    54  24327.675    24339.699    24560.312
+ 30  LG+F+R5       12109.025    56  24330.049    24343.025    24571.303
+ 37  LG+F+I+R3     12117.140    53  24340.280    24351.843    24568.609
+ 38  LG+F+I+R4     12110.083    55  24330.165    24342.660    24567.111
+ 50  WAG+R3        12134.516    33  24335.031    24339.389    24477.199
+ 51  WAG+R4        12130.753    35  24331.505    24336.417    24482.288
+ 59  WAG+I+R3      12133.961    34  24335.922    24340.552    24482.397
+ 60  WAG+I+R4      12130.697    36  24333.395    24338.598    24488.486
+ 72  WAG+F+R3      12116.868    52  24337.735    24348.848    24561.756
+ 73  WAG+F+R4      12112.437    54  24332.873    24344.898    24565.511
+ 81  WAG+F+I+R3    12116.286    53  24338.572    24350.135    24566.901
+ 82  WAG+F+I+R4    12112.613    55  24335.227    24347.722    24572.172
+ 94  JTT+R3        12139.471    33  24344.942    24349.299    24487.109
+ 95  JTT+R4        12135.378    35  24340.756    24345.668    24491.539
+103  JTT+I+R3      12139.629    34  24347.259    24351.889    24493.734
+104  JTT+I+R4      12135.222    36  24342.443    24347.647    24497.535
+116  JTT+F+R3      12118.252    52  24340.504    24351.617    24564.525
+117  JTT+F+R4      12114.244    54  24336.487    24348.511    24569.124
+125  JTT+F+I+R3    12118.318    53  24342.637    24354.200    24570.966
+126  JTT+F+I+R4    12114.481    55  24338.962    24351.457    24575.907
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+138  Q.pfam+R3     12107.157    33  24280.314    24284.671    24422.481
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+139  Q.pfam+R4     12100.476    35  24270.952    24275.864    24421.736
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+140  Q.pfam+R5     12099.810    37  24273.620    24279.122    24433.019
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+147  Q.pfam+I+R3   12107.681    34  24283.363    24287.993    24429.838
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+148  Q.pfam+I+R4   12101.064    36  24274.128    24279.331    24429.219
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+160  Q.pfam+F+R3   12112.673    52  24329.346    24340.459    24553.367
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+161  Q.pfam+F+R4   12106.494    54  24320.988    24333.012    24553.626
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+169  Q.pfam+F+I+R3 12113.474    53  24332.948    24344.512    24561.277
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+170  Q.pfam+F+I+R4 12107.348    55  24324.696    24337.191    24561.642
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+182  Q.bird+R3     12281.562    33  24629.124    24633.481    24771.291
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+183  Q.bird+R4     12271.042    35  24612.085    24616.997    24762.868
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+184  Q.bird+R5     12270.784    37  24615.568    24621.070    24774.967
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+191  Q.bird+I+R3   12284.952    34  24637.904    24642.535    24784.380
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+192  Q.bird+I+R4   12273.625    36  24619.251    24624.454    24774.342
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+204  Q.bird+F+R3   12237.712    52  24579.424    24590.537    24803.445
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+205  Q.bird+F+R4   12227.597    54  24563.194    24575.219    24795.832
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+206  Q.bird+F+R5   12227.365    56  24566.731    24579.706    24807.984
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+213  Q.bird+F+I+R3 12241.957    53  24589.913    24601.477    24818.242
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+214  Q.bird+F+I+R4 12230.482    55  24570.965    24583.459    24807.910
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+226  Q.mammal+R3   12235.352    33  24536.704    24541.061    24678.871
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+227  Q.mammal+R4   12227.302    35  24524.604    24529.516    24675.387
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+228  Q.mammal+R5   12227.027    37  24528.055    24533.558    24687.454
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+235  Q.mammal+I+R3 12237.382    34  24542.763    24547.394    24689.239
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+236  Q.mammal+I+R4 12228.656    36  24529.311    24534.514    24684.403
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+248  Q.mammal+F+R3 12186.331    52  24476.663    24487.776    24700.684
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+249  Q.mammal+F+R4 12178.363    54  24464.726    24476.750    24697.363
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+250  Q.mammal+F+R5 12178.294    56  24468.587    24481.563    24709.841
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+257  Q.mammal+F+I+R3 12188.702    53  24483.405    24494.968    24711.734
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+258  Q.mammal+F+I+R4 12179.980    55  24469.960    24482.455    24706.905
+270  Q.insect+R3   12137.952    33  24341.905    24346.262    24484.072
+271  Q.insect+R4   12131.375    35  24332.751    24337.663    24483.534
+272  Q.insect+R5   12131.003    37  24336.006    24341.509    24495.406
+279  Q.insect+I+R3 12140.694    34  24349.388    24354.018    24495.863
+280  Q.insect+I+R4 12132.853    36  24337.705    24342.908    24492.797
+292  Q.insect+F+R3 12108.263    52  24320.525    24331.638    24544.546
+293  Q.insect+F+R4 12101.751    54  24311.502    24323.526    24544.139
+294  Q.insect+F+R5 12101.350    56  24314.701    24327.676    24555.954
+301  Q.insect+F+I+R3 12109.673    53  24325.347    24336.911    24553.676
+302  Q.insect+F+I+R4 12102.536    55  24315.073    24327.568    24552.018
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+314  Q.plant+R3    12176.172    33  24418.343    24422.701    24560.511
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+315  Q.plant+R4    12168.459    35  24406.918    24411.830    24557.701
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+316  Q.plant+R5    12166.932    37  24407.864    24413.367    24567.264
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+323  Q.plant+I+R3  12179.875    34  24427.750    24432.380    24574.225
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+324  Q.plant+I+R4  12170.662    36  24413.324    24418.527    24568.415
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+336  Q.plant+F+R3  12163.934    52  24431.867    24442.980    24655.888
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+337  Q.plant+F+R4  12156.195    54  24420.391    24432.415    24653.028
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+338  Q.plant+F+R5  12154.763    56  24421.526    24434.502    24662.780
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+345  Q.plant+F+I+R3 12166.549    53  24439.097    24450.661    24667.427
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+346  Q.plant+F+I+R4 12158.106    55  24426.213    24438.708    24663.158
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+358  Q.yeast+R3    12161.518    33  24389.035    24393.393    24531.203
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+359  Q.yeast+R4    12152.825    35  24375.650    24380.562    24526.433
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+360  Q.yeast+R5    12152.304    37  24378.608    24384.111    24538.008
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+367  Q.yeast+I+R3  12164.705    34  24397.410    24402.041    24543.886
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+368  Q.yeast+I+R4  12155.620    36  24383.240    24388.444    24538.332
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+380  Q.yeast+F+R3  12106.658    52  24317.316    24328.429    24541.337
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+381  Q.yeast+F+R4  12099.589    54  24307.178    24319.202    24539.815
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+382  Q.yeast+F+R5  12099.077    56  24310.153    24323.129    24551.407
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+389  Q.yeast+F+I+R3 12108.980    53  24323.960    24335.524    24552.289
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+390  Q.yeast+F+I+R4 12100.920    55  24311.840    24324.335    24548.785
+402  JTTDCMut+R3   12138.992    33  24343.984    24348.341    24486.151
+403  JTTDCMut+R4   12134.392    35  24338.784    24343.696    24489.568
+411  JTTDCMut+I+R3 12139.505    34  24347.010    24351.641    24493.486
+412  JTTDCMut+I+R4 12135.234    36  24342.469    24347.672    24497.560
+424  JTTDCMut+F+R3 12117.444    52  24338.887    24350.000    24562.908
+425  JTTDCMut+F+R4 12112.773    54  24333.547    24345.571    24566.184
+433  JTTDCMut+F+I+R3 12117.591    53  24341.182    24352.745    24569.511
+434  JTTDCMut+F+I+R4 12113.838    55  24337.677    24350.172    24574.622
+446  DCMut+R3      12252.109    33  24570.217    24574.575    24712.385
+447  DCMut+R4      12244.777    35  24559.553    24564.465    24710.337
+448  DCMut+R5      12244.631    37  24563.262    24568.765    24722.662
+455  DCMut+I+R3    12252.016    34  24572.032    24576.663    24718.508
+456  DCMut+I+R4    12244.270    36  24560.539    24565.742    24715.631
+468  DCMut+F+R3    12167.069    52  24438.139    24449.252    24662.160
+469  DCMut+F+R4    12159.777    54  24427.555    24439.579    24660.192
+470  DCMut+F+R5    12159.686    56  24431.372    24444.347    24672.625
+477  DCMut+F+I+R3  12166.032    53  24438.064    24449.628    24666.393
+478  DCMut+F+I+R4  12159.773    55  24429.545    24442.040    24666.491
+490  VT+R3         12103.789    33  24273.579    24277.936    24415.746
+491  VT+R4         12100.709    35  24271.417    24276.330    24422.201
+499  VT+I+R3       12104.117    34  24276.235    24280.865    24422.710
+500  VT+I+R4       12102.271    36  24276.543    24281.746    24431.634
+512  VT+F+R3       12105.536    52  24315.072    24326.185    24539.093
+513  VT+F+R4       12102.681    54  24313.362    24325.386    24545.999
+521  VT+F+I+R3     12106.153    53  24318.307    24329.870    24546.636
+522  VT+F+I+R4     12104.127    55  24318.255    24330.750    24555.200
+534  PMB+R3        12157.637    33  24381.275    24385.632    24523.442
+535  PMB+R4        12155.427    35  24380.854    24385.766    24531.637
+543  PMB+I+R3      12158.757    34  24385.515    24390.145    24531.990
+544  PMB+I+R4      12156.910    36  24385.820    24391.023    24540.911
+556  PMB+F+R3      12143.456    52  24390.913    24402.025    24614.934
+557  PMB+F+R4      12140.559    54  24389.118    24401.142    24621.755
+565  PMB+F+I+R3    12144.502    53  24395.004    24406.568    24623.333
+566  PMB+F+I+R4    12142.155    55  24394.310    24406.805    24631.255
+578  Blosum62+R3   12152.607    33  24371.213    24375.570    24513.380
+579  Blosum62+R4   12150.712    35  24371.424    24376.336    24522.207
+587  Blosum62+I+R3 12152.980    34  24373.960    24378.590    24520.435
+588  Blosum62+I+R4 12151.879    36  24375.759    24380.962    24530.850
+600  Blosum62+F+R3 12136.991    52  24377.981    24389.094    24602.003
+601  Blosum62+F+R4 12134.689    54  24377.378    24389.402    24610.015
+609  Blosum62+F+I+R3 12137.282    53  24380.565    24392.129    24608.894
+610  Blosum62+F+I+R4 12135.939    55  24381.877    24394.372    24618.823
+622  Dayhoff+R3    12252.824    33  24571.648    24576.006    24713.816
+623  Dayhoff+R4    12244.445    35  24558.890    24563.803    24709.674
+624  Dayhoff+R5    12244.417    37  24562.834    24568.337    24722.233
+631  Dayhoff+I+R3  12252.188    34  24572.375    24577.006    24718.851
+632  Dayhoff+I+R4  12244.202    36  24560.404    24565.607    24715.496
+644  Dayhoff+F+R3  12167.076    52  24438.152    24449.265    24662.173
+645  Dayhoff+F+R4  12159.307    54  24426.613    24438.638    24659.251
+646  Dayhoff+F+R5  12159.370    56  24430.741    24443.717    24671.994
+653  Dayhoff+F+I+R3 12165.814    53  24437.627    24449.191    24665.957
+654  Dayhoff+F+I+R4 12159.350    55  24428.700    24441.195    24665.646
+666  mtREV+R3      12742.518    33  25551.036    25555.394    25693.204
+667  mtREV+R4      12726.758    35  25523.516    25528.428    25674.299
+668  mtREV+R5      12726.576    37  25527.151    25532.654    25686.551
+675  mtREV+I+R3    12744.838    34  25557.676    25562.306    25704.151
+676  mtREV+I+R4    12731.133    36  25534.265    25539.468    25689.357
+688  mtREV+F+R3    12256.656    52  24617.312    24628.425    24841.333
+689  mtREV+F+R4    12243.167    54  24594.334    24606.358    24826.971
+690  mtREV+F+R5    12242.989    56  24597.977    24610.953    24839.231
+697  mtREV+F+I+R3  12258.158    53  24622.315    24633.879    24850.644
+698  mtREV+F+I+R4  12247.456    55  24604.911    24617.406    24841.857
+710  mtART+R3      12952.542    33  25971.084    25975.442    26113.252
+711  mtART+R4      12894.150    35  25858.300    25863.212    26009.084
+712  mtART+R5      12887.734    37  25849.468    25854.971    26008.868
+719  mtART+I+R3    12949.912    34  25967.824    25972.454    26114.299
+720  mtART+I+R4    12906.983    36  25885.966    25891.169    26041.057
+732  mtART+F+R3    12386.236    52  24876.472    24887.585    25100.493
+733  mtART+F+R4    12338.626    54  24785.253    24797.277    25017.890
+734  mtART+F+R5    12337.971    56  24787.942    24800.918    25029.196
+741  mtART+F+I+R3  12386.263    53  24878.525    24890.089    25106.854
+742  mtART+F+I+R4  12351.135    55  24812.271    24824.766    25049.216
+754  mtZOA+R3      12690.055    33  25446.110    25450.467    25588.277
+755  mtZOA+R4      12660.463    35  25390.926    25395.838    25541.709
+756  mtZOA+R5      12659.937    37  25393.874    25399.377    25553.274
+763  mtZOA+I+R3    12682.947    34  25433.894    25438.525    25580.370
+764  mtZOA+I+R4    12668.936    36  25409.873    25415.076    25564.964
+776  mtZOA+F+R3    12262.631    52  24629.261    24640.374    24853.283
+777  mtZOA+F+R4    12232.468    54  24572.936    24584.960    24805.573
+778  mtZOA+F+R5    12231.549    56  24575.098    24588.074    24816.352
+785  mtZOA+F+I+R3  12262.089    53  24630.178    24641.741    24858.507
+786  mtZOA+F+I+R4  12240.618    55  24591.236    24603.731    24828.181
+798  mtMet+R3      12785.045    33  25636.090    25640.448    25778.258
+799  mtMet+R4      12771.492    35  25612.985    25617.897    25763.768
+800  mtMet+R5      12771.430    37  25616.861    25622.364    25776.261
+807  mtMet+I+R3    12787.337    34  25642.674    25647.305    25789.150
+808  mtMet+I+R4    12775.433    36  25622.866    25628.069    25777.957
+820  mtMet+F+R3    12241.545    52  24587.091    24598.204    24811.112
+821  mtMet+F+R4    12224.464    54  24556.927    24568.952    24789.565
+822  mtMet+F+R5    12224.027    56  24560.053    24573.029    24801.307
+829  mtMet+F+I+R3  12241.464    53  24588.928    24600.491    24817.257
+830  mtMet+F+I+R4  12229.514    55  24569.029    24581.524    24805.974
+842  mtVer+R3      12856.818    33  25779.635    25783.992    25921.802
+843  mtVer+R4      12833.217    35  25736.435    25741.347    25887.218
+844  mtVer+R5      12832.796    37  25739.591    25745.094    25898.991
+851  mtVer+I+R3    12858.575    34  25785.151    25789.781    25931.626
+852  mtVer+I+R4    12840.822    36  25753.644    25758.847    25908.736
+864  mtVer+F+R3    12349.360    52  24802.720    24813.833    25026.741
+865  mtVer+F+R4    12321.974    54  24751.948    24763.972    24984.585
+866  mtVer+F+R5    12320.281    56  24752.561    24765.537    24993.815
+873  mtVer+F+I+R3  12348.021    53  24802.043    24813.606    25030.372
+874  mtVer+F+I+R4  12329.396    55  24768.791    24781.286    25005.737
+886  mtInv+R3      12891.682    33  25849.363    25853.721    25991.530
+887  mtInv+R4      12885.876    35  25841.752    25846.664    25992.535
+895  mtInv+I+R3    12892.349    34  25852.697    25857.328    25999.173
+896  mtInv+I+R4    12887.398    36  25846.796    25851.999    26001.887
+908  mtInv+F+R3    12187.735    52  24479.469    24490.582    24703.490
+909  mtInv+F+R4    12175.991    54  24459.982    24472.007    24692.620
+910  mtInv+F+R5    12176.243    56  24464.486    24477.462    24705.740
+917  mtInv+F+I+R3  12187.459    53  24480.917    24492.481    24709.246
+918  mtInv+F+I+R4  12178.295    55  24466.591    24479.085    24703.536
+930  mtMAM+R3      12975.804    33  26017.609    26021.966    26159.776
+931  mtMAM+R4      12918.718    35  25907.436    25912.348    26058.219
+932  mtMAM+R5      12913.927    37  25901.854    25907.357    26061.254
+939  mtMAM+I+R3    12979.427    34  26026.854    26031.485    26173.330
+940  mtMAM+I+R4    12935.966    36  25943.931    25949.134    26099.023
+952  mtMAM+F+R3    12467.806    52  25039.612    25050.725    25263.633
+953  mtMAM+F+R4    12420.750    54  24949.500    24961.524    25182.137
+954  mtMAM+F+R5    12420.536    56  24953.071    24966.047    25194.325
+961  mtMAM+F+I+R3  12468.904    53  25043.808    25055.371    25272.137
+962  mtMAM+F+I+R4  12434.564    55  24979.127    24991.622    25216.073
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+974  FLAVI+R3      12489.494    33  25044.988    25049.345    25187.155
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+975  FLAVI+R4      12454.268    35  24978.536    24983.448    25129.319
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+976  FLAVI+R5      12451.424    37  24976.848    24982.350    25136.247
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+983  FLAVI+I+R3    12487.933    34  25043.866    25048.496    25190.341
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+984  FLAVI+I+R4    12463.052    36  24998.104    25003.308    25153.196
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+996  FLAVI+F+R3    12395.082    52  24894.165    24905.277    25118.186
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+997  FLAVI+F+R4    12356.288    54  24820.576    24832.600    25053.213
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+998  FLAVI+F+R5    12355.823    56  24823.646    24836.621    25064.899
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+1005  FLAVI+F+I+R3  12389.691    53  24885.383    24896.946    25113.712
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+1006  FLAVI+F+I+R4  12364.388    55  24838.777    24851.272    25075.722
+1018  HIVb+R3       12344.328    33  24754.656    24759.014    24896.824
+1019  HIVb+R4       12330.659    35  24731.318    24736.231    24882.102
+1020  HIVb+R5       12330.362    37  24734.724    24740.226    24894.123
+1027  HIVb+I+R3     12343.200    34  24754.400    24759.030    24900.875
+1028  HIVb+I+R4     12333.820    36  24739.639    24744.842    24894.731
+1040  HIVb+F+R3     12285.235    52  24674.471    24685.584    24898.492
+1041  HIVb+F+R4     12268.400    54  24644.799    24656.824    24877.437
+1042  HIVb+F+R5     12268.062    56  24648.124    24661.100    24889.378
+1049  HIVb+F+I+R3   12283.588    53  24673.177    24684.740    24901.506
+1050  HIVb+F+I+R4   12272.927    55  24655.854    24668.349    24892.799
+1062  HIVw+R3       12703.220    33  25472.441    25476.798    25614.608
+1063  HIVw+R4       12695.071    35  25460.143    25465.055    25610.926
+1064  HIVw+R5       12693.021    37  25460.042    25465.545    25619.442
+1071  HIVw+I+R3     12699.746    34  25467.492    25472.122    25613.967
+1072  HIVw+I+R4     12693.445    36  25458.889    25464.093    25613.981
+1084  HIVw+F+R3     12414.689    52  24933.378    24944.490    25157.399
+1085  HIVw+F+R4     12393.363    54  24894.725    24906.750    25127.363
+1086  HIVw+F+R5     12391.335    56  24894.670    24907.645    25135.923
+1093  HIVw+F+I+R3   12407.639    53  24921.278    24932.842    25149.607
+1094  HIVw+F+I+R4   12396.493    55  24902.986    24915.481    25139.932
+1106  FLU+R3        12339.120    33  24744.240    24748.598    24886.407
+1107  FLU+R4        12323.595    35  24717.190    24722.102    24867.973
+1108  FLU+R5        12323.240    37  24720.480    24725.983    24879.879
+1115  FLU+I+R3      12337.342    34  24742.684    24747.314    24889.159
+1116  FLU+I+R4      12326.398    36  24724.797    24730.000    24879.889
+1128  FLU+F+R3      12235.550    52  24575.101    24586.214    24799.122
+1129  FLU+F+R4      12217.069    54  24542.137    24554.161    24774.774
+1130  FLU+F+R5      12216.095    56  24544.190    24557.166    24785.444
+1137  FLU+F+I+R3    12233.043    53  24572.086    24583.649    24800.415
+1138  FLU+F+I+R4    12221.383    55  24552.767    24565.261    24789.712
+1150  rtREV+R3      12209.468    33  24484.935    24489.293    24627.102
+1151  rtREV+R4      12204.989    35  24479.977    24484.890    24630.761
+1159  rtREV+I+R3    12209.536    34  24487.072    24491.702    24633.547
+1160  rtREV+I+R4    12206.123    36  24484.247    24489.450    24639.338
+1172  rtREV+F+R3    12133.721    52  24371.443    24382.556    24595.464
+1173  rtREV+F+R4    12128.007    54  24364.013    24376.037    24596.650
+1181  rtREV+F+I+R3  12133.578    53  24373.156    24384.720    24601.486
+1182  rtREV+F+I+R4  12129.416    55  24368.832    24381.326    24605.777
+1194  cpREV+R3      12208.160    33  24482.320    24486.677    24624.487
+1195  cpREV+R4      12199.243    35  24468.486    24473.398    24619.269
+1196  cpREV+R5      12199.273    37  24472.546    24478.049    24631.946
+1203  cpREV+I+R3    12208.069    34  24484.138    24488.769    24630.614
+1204  cpREV+I+R4    12199.916    36  24471.832    24477.035    24626.924
+1216  cpREV+F+R3    12191.332    52  24486.664    24497.777    24710.686
+1217  cpREV+F+R4    12180.597    54  24469.194    24481.219    24701.832
+1218  cpREV+F+R5    12180.638    56  24473.276    24486.252    24714.530
+1225  cpREV+F+I+R3  12191.054    53  24488.107    24499.671    24716.436
+1226  cpREV+F+I+R4  12181.381    55  24472.762    24485.257    24709.707
+Akaike Information Criterion:           Q.pfam+R4
+Corrected Akaike Information Criterion: Q.pfam+R4
+Bayesian Information Criterion:         VT+R3
+Best-fit model: VT+R3 chosen according to BIC
+
+All model information printed to FungalCW_tree_20231129/133954at4751.aa.mfa.model.gz
+CPU time for ModelFinder: 597.196 seconds (0h:9m:57s)
+Wall-clock time for ModelFinder: 302.571 seconds (0h:5m:2s)
+Generating 1000 samples for ultrafast bootstrap (seed: 940178)...
+
+NOTE: 6 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -12103.789
+Optimal log-likelihood: -12103.715
+Site proportion and rates:  (0.301,0.144) (0.271,0.425) (0.428,1.964)
+Parameters optimization took 1 rounds (0.084 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.02654 secs using 198% CPU
+Computing ML distances took 0.026807 sec (of wall-clock time) 0.052799 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 5.57899e-05 secs using 199% CPU
+Constructing RapidNJ tree: done in 0.000242949 secs using 199.2% CPU
+Computing RapidNJ tree took 0.000403 sec (of wall-clock time) 0.000801 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -12113.530
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.307 second
+Computing log-likelihood of 97 initial trees ... 1.236 seconds
+Current best score: -12103.715
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.0932031 secs using 197.2% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -12103.093
+Optimizing NNI: done in 0.176762 secs using 197.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -12097.788
+Optimizing NNI: done in 0.206868 secs using 198.2% CPU
+Optimizing NNI: done in 0.196791 secs using 198.2% CPU
+Optimizing NNI: done in 0.146375 secs using 197.6% CPU
+Optimizing NNI: done in 0.154113 secs using 196.9% CPU
+Optimizing NNI: done in 0.154753 secs using 198.6% CPU
+Optimizing NNI: done in 0.176257 secs using 198.3% CPU
+Optimizing NNI: done in 0.15453 secs using 197.7% CPU
+Optimizing NNI: done in 0.248953 secs using 197.9% CPU
+Iteration 10 / LogL: -12097.862 / Time: 0h:0m:3s
+Optimizing NNI: done in 0.191034 secs using 197.2% CPU
+Optimizing NNI: done in 0.195617 secs using 197.8% CPU
+Optimizing NNI: done in 0.211408 secs using 197.4% CPU
+Optimizing NNI: done in 0.240295 secs using 197.9% CPU
+Optimizing NNI: done in 0.210213 secs using 198.3% CPU
+Optimizing NNI: done in 0.193673 secs using 197.8% CPU
+Optimizing NNI: done in 0.21632 secs using 198.1% CPU
+Optimizing NNI: done in 0.186597 secs using 196.8% CPU
+Optimizing NNI: done in 0.215037 secs using 198.3% CPU
+Optimizing NNI: done in 0.216683 secs using 197.8% CPU
+Iteration 20 / LogL: -12098.426 / Time: 0h:0m:6s
+Finish initializing candidate tree set (3)
+Current best tree score: -12097.788 / CPU time: 5.647
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 0.129944 secs using 198.3% CPU
+Optimizing NNI: done in 0.197568 secs using 198.2% CPU
+Optimizing NNI: done in 0.165963 secs using 198.1% CPU
+Optimizing NNI: done in 0.0909879 secs using 198.3% CPU
+Optimizing NNI: done in 0.115403 secs using 198.3% CPU
+Optimizing NNI: done in 0.202396 secs using 196.8% CPU
+Optimizing NNI: done in 0.241381 secs using 197.7% CPU
+Optimizing NNI: done in 0.224681 secs using 198.4% CPU
+Optimizing NNI: done in 0.17703 secs using 197.8% CPU
+Optimizing NNI: done in 0.16809 secs using 197.6% CPU
+Iteration 30 / LogL: -12105.081 / Time: 0h:0m:7s (0h:0m:19s left)
+Optimizing NNI: done in 0.141386 secs using 197% CPU
+Optimizing NNI: done in 0.201467 secs using 198.2% CPU
+Optimizing NNI: done in 0.140196 secs using 197.5% CPU
+Optimizing NNI: done in 0.18488 secs using 198.4% CPU
+Optimizing NNI: done in 0.148021 secs using 197.7% CPU
+Optimizing NNI: done in 0.176813 secs using 198.2% CPU
+Optimizing NNI: done in 0.172583 secs using 193.2% CPU
+Optimizing NNI: done in 0.121143 secs using 198.3% CPU
+Optimizing NNI: done in 0.235675 secs using 197.9% CPU
+Optimizing NNI: done in 0.152652 secs using 198.2% CPU
+Iteration 40 / LogL: -12103.130 / Time: 0h:0m:9s (0h:0m:15s left)
+Optimizing NNI: done in 0.194949 secs using 196.7% CPU
+Optimizing NNI: done in 0.178135 secs using 198.3% CPU
+Optimizing NNI: done in 0.220692 secs using 196.5% CPU
+Optimizing NNI: done in 0.213348 secs using 197.7% CPU
+Optimizing NNI: done in 0.139507 secs using 198.1% CPU
+Optimizing NNI: done in 0.0917401 secs using 198.3% CPU
+Optimizing NNI: done in 0.184005 secs using 198.3% CPU
+Optimizing NNI: done in 0.213179 secs using 197.9% CPU
+Optimizing NNI: done in 0.154759 secs using 198.2% CPU
+Optimizing NNI: done in 0.22125 secs using 198% CPU
+Iteration 50 / LogL: -12103.194 / Time: 0h:0m:11s (0h:0m:12s left)
+Log-likelihood cutoff on original alignment: -12140.073
+Optimizing NNI: done in 0.167103 secs using 197.6% CPU
+Optimizing NNI: done in 0.181909 secs using 198.2% CPU
+Optimizing NNI: done in 0.148009 secs using 198.2% CPU
+Optimizing NNI: done in 0.197418 secs using 198.2% CPU
+Optimizing NNI: done in 0.182319 secs using 198.3% CPU
+Optimizing NNI: done in 0.156039 secs using 198.2% CPU
+Optimizing NNI: done in 0.17326 secs using 198% CPU
+Optimizing NNI: done in 0.112376 secs using 197.3% CPU
+Optimizing NNI: done in 0.174429 secs using 198.2% CPU
+Optimizing NNI: done in 0.160826 secs using 196.9% CPU
+Iteration 60 / LogL: -12097.859 / Time: 0h:0m:13s (0h:0m:9s left)
+Optimizing NNI: done in 0.08039 secs using 198.2% CPU
+Optimizing NNI: done in 0.213627 secs using 197.9% CPU
+Optimizing NNI: done in 0.35368 secs using 197.4% CPU
+Optimizing NNI: done in 0.178633 secs using 198.4% CPU
+Optimizing NNI: done in 0.151038 secs using 198.1% CPU
+Optimizing NNI: done in 0.218052 secs using 197.3% CPU
+Optimizing NNI: done in 0.198899 secs using 195.8% CPU
+Optimizing NNI: done in 0.152437 secs using 198.2% CPU
+Optimizing NNI: done in 0.146453 secs using 197.4% CPU
+Optimizing NNI: done in 0.14804 secs using 198.1% CPU
+Iteration 70 / LogL: -12103.113 / Time: 0h:0m:15s (0h:0m:7s left)
+Optimizing NNI: done in 0.157726 secs using 198.1% CPU
+Optimizing NNI: done in 0.186355 secs using 197.3% CPU
+Optimizing NNI: done in 0.208093 secs using 198.6% CPU
+Optimizing NNI: done in 0.10962 secs using 197.4% CPU
+Optimizing NNI: done in 0.189862 secs using 197.2% CPU
+Optimizing NNI: done in 0.173619 secs using 198.2% CPU
+Optimizing NNI: done in 0.164376 secs using 198.3% CPU
+Optimizing NNI: done in 0.21369 secs using 198.3% CPU
+Optimizing NNI: done in 0.202934 secs using 198.4% CPU
+Optimizing NNI: done in 0.205185 secs using 198.3% CPU
+Iteration 80 / LogL: -12097.829 / Time: 0h:0m:17s (0h:0m:4s left)
+Optimizing NNI: done in 0.185222 secs using 198.2% CPU
+Optimizing NNI: done in 0.172724 secs using 198.3% CPU
+Optimizing NNI: done in 0.181028 secs using 197.5% CPU
+Optimizing NNI: done in 0.173649 secs using 198.8% CPU
+Optimizing NNI: done in 0.176892 secs using 198.2% CPU
+Optimizing NNI: done in 0.139148 secs using 197.4% CPU
+Optimizing NNI: done in 0.198573 secs using 197.7% CPU
+Optimizing NNI: done in 0.175733 secs using 197% CPU
+Optimizing NNI: done in 0.262613 secs using 197.3% CPU
+Optimizing NNI: done in 0.187495 secs using 198.2% CPU
+Iteration 90 / LogL: -12104.518 / Time: 0h:0m:19s (0h:0m:2s left)
+Optimizing NNI: done in 0.105973 secs using 197.2% CPU
+UPDATE BEST LOG-LIKELIHOOD: -12097.783
+Optimizing NNI: done in 0.276006 secs using 197.5% CPU
+Optimizing NNI: done in 0.16091 secs using 197.7% CPU
+Optimizing NNI: done in 0.149522 secs using 198.3% CPU
+Optimizing NNI: done in 0.156878 secs using 197.9% CPU
+Optimizing NNI: done in 0.181206 secs using 197.4% CPU
+Optimizing NNI: done in 0.113169 secs using 197.4% CPU
+Optimizing NNI: done in 0.206157 secs using 198.3% CPU
+Optimizing NNI: done in 0.137777 secs using 197.6% CPU
+Optimizing NNI: done in 0.180563 secs using 197.2% CPU
+Iteration 100 / LogL: -12097.806 / Time: 0h:0m:21s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -12135.990
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+Optimizing NNI: done in 0.208671 secs using 196.9% CPU
+Optimizing NNI: done in 0.147551 secs using 198.4% CPU
+Optimizing NNI: done in 0.231664 secs using 198% CPU
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:0m:21s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -12097.783
+2. Current log-likelihood: -12097.726
+3. Current log-likelihood: -12097.652
+4. Current log-likelihood: -12097.585
+5. Current log-likelihood: -12097.526
+6. Current log-likelihood: -12097.472
+7. Current log-likelihood: -12097.423
+8. Current log-likelihood: -12097.378
+9. Current log-likelihood: -12097.337
+10. Current log-likelihood: -12097.299
+11. Current log-likelihood: -12097.265
+12. Current log-likelihood: -12097.234
+13. Current log-likelihood: -12097.204
+14. Current log-likelihood: -12097.178
+15. Current log-likelihood: -12097.153
+16. Current log-likelihood: -12097.135
+17. Current log-likelihood: -12097.119
+18. Current log-likelihood: -12097.102
+19. Current log-likelihood: -12097.087
+20. Current log-likelihood: -12097.073
+21. Current log-likelihood: -12097.059
+22. Current log-likelihood: -12097.046
+23. Current log-likelihood: -12097.035
+24. Current log-likelihood: -12097.024
+25. Current log-likelihood: -12097.013
+Optimal log-likelihood: -12096.999
+Site proportion and rates:  (0.232,0.119) (0.329,0.370) (0.439,1.937)
+Parameters optimization took 25 rounds (1.960 sec)
+BEST SCORE FOUND : -12096.999
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+0.140 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file FungalCW_tree_20231129/133954at4751.aa.mfa.splits.nex
+Total tree length: 17.174
+
+Total number of iterations: 103
+CPU time used for tree search: 42.038 sec (0h:0m:42s)
+Wall-clock time used for tree search: 21.368 sec (0h:0m:21s)
+Total CPU time used: 46.916 sec (0h:0m:46s)
+Total wall-clock time used: 23.926 sec (0h:0m:23s)
+
+Computing bootstrap consensus tree...
+Reading input file FungalCW_tree_20231129/133954at4751.aa.mfa.splits.nex...
+16 taxa and 75 splits.
+Consensus tree written to FungalCW_tree_20231129/133954at4751.aa.mfa.contree
+Reading input trees file FungalCW_tree_20231129/133954at4751.aa.mfa.contree
+Log-likelihood of consensus tree: -12096.999
+
+Analysis results written to: 
+  IQ-TREE report:                FungalCW_tree_20231129/133954at4751.aa.mfa.iqtree
+  Maximum-likelihood tree:       FungalCW_tree_20231129/133954at4751.aa.mfa.treefile
+  Likelihood distances:          FungalCW_tree_20231129/133954at4751.aa.mfa.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          FungalCW_tree_20231129/133954at4751.aa.mfa.splits.nex
+  Consensus tree:                FungalCW_tree_20231129/133954at4751.aa.mfa.contree
+  Screen log file:               FungalCW_tree_20231129/133954at4751.aa.mfa.log
+
+Date and Time: Wed Nov 29 01:34:31 2023
